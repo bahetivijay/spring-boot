@@ -23,7 +23,8 @@ build:
     
     - mvn package docker:build
 
-#  post_ci:
+  post_ci:
+    - docker push bahetivijay/springproject:version
     #- docker build -t $AWS_ECR_URL/$AWS_DOCKER_REPO:$BRANCH.$BUILD_NUMBER .
     #- docker push $AWS_ECR_URL/$AWS_DOCKER_REPO:$BRANCH.$BUILD_NUMBER
 	
