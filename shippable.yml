@@ -5,8 +5,9 @@ jdk:
   
 env:
   global:
-    - DOCKER_REPO=spring-repo
+    - AWS_DOCKER_REPO=spring-repo
     - AWS_ECR_URL=739481299957.dkr.ecr.us-west-2.amazonaws.com
+	- 
     
 build:
   advancedReporting: true
@@ -21,8 +22,13 @@ build:
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults
     
-    - mvn package docker:build -DpushImage
+    - mvn package docker:build
 
 #  post_ci:
-    #- docker build -t $AWS_ECR_URL/$DOCKER_REPO:$BRANCH.$BUILD_NUMBER .
-    #- docker push $AWS_ECR_URL/$DOCKER_REPO:$BRANCH.$BUILD_NUMBER
+    #- docker build -t $AWS_ECR_URL/$AWS_DOCKER_REPO:$BRANCH.$BUILD_NUMBER .
+    #- docker push $AWS_ECR_URL/$AWS_DOCKER_REPO:$BRANCH.$BUILD_NUMBER
+	
+integrations:
+  hub:
+    - integrationName: docker-integration    
+      type: docker       
