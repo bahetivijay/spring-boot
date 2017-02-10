@@ -2,7 +2,12 @@ language: java
 
 jdk:
   - oraclejdk7
-
+  
+env:
+  global:
+    - DOCKER_REPO=Docker
+    - AWS_ECR_URL=ec2-35-161-136-45.us-west-2.compute.amazonaws.com
+    
 build:
   advancedReporting: true
   pre_ci_boot:
@@ -17,3 +22,7 @@ build:
     - mkdir -p shippable/testresults
     
     - mvn package
+
+  post_ci:
+    - docker build -t $AWS_ECR_URL/$DOCKER_REPO:$BRANCH.$BUILD_NUMBER .
+    - docker push $AWS_ECR_URL/$DOCKER_REPO:$BRANCH.$BUILD_NUMBER
