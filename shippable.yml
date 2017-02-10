@@ -6,7 +6,7 @@ jdk:
 build:
   advancedReporting: true
   pre_ci_boot:
-    image_name: drydock/u14
+    image_name: drydock/u14jav
     image_tag: tip
     pull: false
     options: '--privileged=true --net=bridge'    
