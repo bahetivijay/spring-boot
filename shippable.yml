@@ -7,7 +7,10 @@ build:
   advancedReporting: true
   pre_ci_boot:
     image_name: drydock/u14
-    
+    image_tag: tip
+    pull: false
+    options: '--privileged=true --net=bridge'    
+
   ci:
     #Create folders for test and code coverage
     - mkdir -p shippable/codecoverage
