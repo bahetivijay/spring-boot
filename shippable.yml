@@ -7,7 +7,7 @@ env:
   global:
     - AWS_DOCKER_REPO=spring-repo
     - AWS_ECR_URL=739481299957.dkr.ecr.us-west-2.amazonaws.com
-	- DOCKER_INTEGRATION_NAME = docker-integration
+	- DOCKER_INTEGRATION_NAME=docker-integration
     
 build:
   advancedReporting: true
