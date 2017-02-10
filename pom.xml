@@ -7,7 +7,7 @@
 		<version>1.5.1.RELEASE</version>
 	</parent>
 	<groupId>com.ibm.services</groupId>
-	<artifactId>SpringProject</artifactId>
+	<artifactId>springproject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
