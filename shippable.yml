@@ -5,8 +5,8 @@ jdk:
   
 env:
   global:
-    - DOCKER_REPO=Docker
-    - AWS_ECR_URL=ec2-35-161-136-45.us-west-2.compute.amazonaws.com
+    - DOCKER_REPO=spring-repo
+    - AWS_ECR_URL=739481299957.dkr.ecr.us-west-2.amazonaws.com
     
 build:
   advancedReporting: true
