@@ -1,0 +1,15 @@
+jobs:
+  - name: docker-spring-manifest
+    type: manifest
+    steps:
+     - IN: docker-spring-image
+     - TASK: managed
+
+  - name: deploy-pipelines-spring
+    type: deploy
+    steps:
+      - IN: docker-spring-manifest
+#      - IN: docker-options
+      - IN: ecs-cluster
+      - TASK: managed
+        deployMethod: upgrade
