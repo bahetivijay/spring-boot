@@ -32,3 +32,10 @@ integrations:
   hub:
     - integrationName: docker-integration
       type: docker
+  notifications:
+    - integrationName: "deploy-event-trigger"
+      type: webhook
+      payload:
+		- versionName=$BRANCH.$BUILD_NUMBER
+      on_success: always
+      on_failure: never  

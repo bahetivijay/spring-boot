@@ -9,7 +9,7 @@ jobs:
     type: deploy
     steps:
       - IN: docker-spring-manifest
-#      - IN: docker-options
+      - IN: docker-options
       - IN: ecs-cluster
       - TASK: managed
         deployMethod: upgrade

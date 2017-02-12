@@ -8,11 +8,11 @@ resources:
     seed:
       versionName: "latest"
 
-#  - name: docker-options
-#    type: dockerOptions
-#    version:
-#      portMappings:
-#        - 80:80
+  - name: docker-options
+    type: dockerOptions
+    version:
+      portMappings:
+        - 8080:8080
 
   - name: ecs-cluster
     type: cluster
