@@ -18,5 +18,5 @@ resources:
     type: cluster
     integration: amazon-aws
     pointer:
-      sourceName : "spring-project"
+      sourceName : "mycluster"
       region: "us-west-2"
