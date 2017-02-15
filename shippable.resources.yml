@@ -14,9 +14,8 @@ resources:
       portMappings:
         - "8080:8080"
 
-  - name: ecs-cluster
+  - name: docker-cluster
     type: cluster
-    integration: amazon-aws
+    integration: docker-deploy
     pointer:
-      sourceName : "mycluster"
-      region: "us-west-2"
+      sourceName : "spring-project"
