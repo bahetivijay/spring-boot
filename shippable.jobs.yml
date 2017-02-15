@@ -10,6 +10,6 @@ jobs:
     steps:
       - IN: docker-spring-manifest
       - IN: docker-options
-      - IN: ecs-cluster
+      - IN: docker-cluster
       - TASK: managed
         deployMethod: blueGreen
