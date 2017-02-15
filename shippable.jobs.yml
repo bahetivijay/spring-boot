@@ -10,6 +10,7 @@ jobs:
     type: deploy
     steps:
       - IN: docker-spring-manifest
+        force: true
 #      - IN: docker-options
       - IN: docker-cluster
       - TASK: managed
