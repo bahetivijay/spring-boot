@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
      - IN: docker-spring-image
+       versionName: "latest"
      - IN: docker-options
 
   - name: deploy-pipelines-spring
