@@ -13,4 +13,4 @@ jobs:
 #      - IN: docker-options
       - IN: docker-cluster
       - TASK: managed
-        deployMethod: blueGreen
+        deployMethod: upgrade
