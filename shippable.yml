@@ -39,7 +39,7 @@ integrations:
       - versionName=$BRANCH.$BUILD_NUMBER
       on_success: always
       on_failure: never  
-    - integrationName: slack-integration
+    - integrationName: slack-spring-project
       type: slack
       recipients:
         - "#shippable-builds"
