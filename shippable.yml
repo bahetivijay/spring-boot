@@ -39,3 +39,13 @@ integrations:
       - versionName=$BRANCH.$BUILD_NUMBER
       on_success: always
       on_failure: never  
+    - integrationName: slack-integration
+      type: slack
+      recipients:
+        - "#shippable-builds"
+      branches:
+        only:
+          - master
+      on_success: always
+      on_failure: always
+      
